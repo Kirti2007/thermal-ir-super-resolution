@@ -1,0 +1,80 @@
+{
+    "dataset": "SSL4EO-L OLI/TIRS TOA",
+    "source": "torchgeo/ssl4eo_l_benchmark",
+    "total_samples": 25000,
+    "splits": {
+        "train": 17500,
+        "val": 3750,
+        "test": 3750
+    },
+    "bands": {
+        "optical": [
+            "Band 1",
+            "Band 2",
+            "Band 3",
+            "Band 4",
+            "Band 5",
+            "Band 6",
+            "Band 7"
+        ],
+        "ignored": [
+            "Band 8 - Panchromatic",
+            "Band 9 - Cirrus"
+        ],
+        "thermal": [
+            "Band 10 - TIRS",
+            "Band 11 - TIRS"
+        ]
+    },
+    "shapes": {
+        "optical": [
+            7,
+            264,
+            264
+        ],
+        "thermal_hr": [
+            2,
+            264,
+            264
+        ],
+        "thermal_lr": [
+            2,
+            132,
+            132
+        ]
+    },
+    "dtype": "float32",
+    "value_range": [
+        0.0,
+        1.0
+    ],
+    "thermal_lr_generation": {
+        "method": "2x spatial downsampling",
+        "input": "264x264",
+        "output": "132x132",
+        "resampling": "BOX"
+    },
+    "results": {
+        "train": {
+            "total": 17500,
+            "new": 17500,
+            "skipped": 0,
+            "failed": 0,
+            "errors": []
+        },
+        "val": {
+            "total": 3750,
+            "new": 3750,
+            "skipped": 0,
+            "failed": 0,
+            "errors": []
+        },
+        "test": {
+            "total": 3750,
+            "new": 3750,
+            "skipped": 0,
+            "failed": 0,
+            "errors": []
+        }
+    }
+}
